@@ -9,6 +9,15 @@ class Point {
     draw () {
         console.log('X: ' + this.x + ' , Y: ' + this.y);
     }
+    get X() {//get property
+        return this.x;
+    }
+
+    set X(value) {//set property
+        if (value < 0) 
+            throw new Error( 'value cannot be less than 0.');
+        this.x = value;
+    }
 }
 
 let point = new Point(1, 2);
